@@ -1,6 +1,6 @@
 # ⚡ GraphQL Security Checklist
 
-> **Level:** Professional / Senior AppSec Engineer
+> **Audience:** AppSec learners and practitioners
 > **Use Case:** GraphQL API Security Review, Penetration Testing
 
 ---

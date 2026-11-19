@@ -1,6 +1,6 @@
 # 🎯 Web Application Penetration Testing Checklist
 
-> **Level:** Professional / Senior AppSec Engineer
+> **Audience:** AppSec learners and practitioners
 > **Use Case:** Black-box / Grey-box / White-box Pentest Engagements
 > **Framework Reference:** OWASP Testing Guide v4.2, PTES, OSSTMM
 

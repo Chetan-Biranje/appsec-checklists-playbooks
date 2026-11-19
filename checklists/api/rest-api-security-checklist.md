@@ -1,6 +1,6 @@
 # 🔐 REST API Security Checklist
 
-> **Level:** Professional / Senior AppSec Engineer
+> **Audience:** AppSec learners and practitioners
 > **Use Case:** API Design Review, Pre-deployment Security Gate, Code Review
 
 ---

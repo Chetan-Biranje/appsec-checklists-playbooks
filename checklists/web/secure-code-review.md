@@ -1,6 +1,6 @@
 # 🔍 Secure Code Review Checklist
 
-> **Level:** Professional / Senior AppSec Engineer
+> **Audience:** AppSec learners and practitioners
 > **Use Case:** Manual Code Review, Pull Request Security Gate, Security Audit
 
 ---

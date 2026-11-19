@@ -1,10 +1,9 @@
 # 🛡️ AppSec Checklists & Playbooks
 
-> A professional-grade repository of Application Security checklists, playbooks, and response guides for Senior AppSec Engineers and Security Teams.
+> Application Security checklists, playbooks and response guides that I collect and refine while learning AppSec. Useful for code reviews, assessments and incident response practice.
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Maintained: Yes](https://img.shields.io/badge/Maintained-Yes-green.svg)
-![Level: Professional](https://img.shields.io/badge/Level-Professional%20%2F%20Senior-red.svg)
 ![Topics: AppSec](https://img.shields.io/badge/Topics-Web%20%7C%20API%20%7C%20Mobile%20%7C%20Cloud-orange.svg)
 
 ---

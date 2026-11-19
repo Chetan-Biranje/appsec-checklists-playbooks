@@ -1,6 +1,6 @@
 # 🍎 iOS Application Security Checklist
 
-> **Level:** Professional / Senior AppSec Engineer
+> **Audience:** AppSec learners and practitioners
 > **Use Case:** iOS App Security Review, Pentest, Pre-release Audit
 
 ---

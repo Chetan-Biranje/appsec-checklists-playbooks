@@ -1,6 +1,6 @@
 # 📱 OWASP MASVS Mobile Application Security Checklist
 
-> **Level:** Professional / Senior AppSec Engineer
+> **Audience:** AppSec learners and practitioners
 > **Standard:** OWASP MASVS v2.0 + MASTG
 > **Applies To:** Android & iOS Applications
 

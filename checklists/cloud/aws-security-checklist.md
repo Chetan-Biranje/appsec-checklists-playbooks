@@ -1,6 +1,6 @@
 # ☁️ AWS Security Checklist
 
-> **Level:** Professional / Senior AppSec / Cloud Security Engineer
+> **Audience:** AppSec learners and practitioners
 > **Use Case:** AWS Account Security Review, Cloud Pentest, Compliance Audit
 > **Reference:** CIS AWS Foundations Benchmark v2.0, AWS Well-Architected Security Pillar
 

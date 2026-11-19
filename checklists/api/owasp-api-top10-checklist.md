@@ -1,6 +1,6 @@
 # 🔌 OWASP API Security Top 10 Checklist
 
-> **Level:** Professional / Senior AppSec Engineer
+> **Audience:** AppSec learners and practitioners
 > **Standard:** OWASP API Security Top 10 (2023)
 > **Use Case:** API Security Assessment, Design Review, Pre-release Gate
 

@@ -1,6 +1,6 @@
 # 🐳 Container & Kubernetes Security Checklist
 
-> **Level:** Professional / Senior AppSec / Cloud Security Engineer
+> **Audience:** AppSec learners and practitioners
 > **Use Case:** Container Security Review, Kubernetes Cluster Audit
 
 ---

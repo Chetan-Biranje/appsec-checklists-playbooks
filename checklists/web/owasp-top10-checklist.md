@@ -1,6 +1,6 @@
 # 🌐 OWASP Top 10 Web Application Security Checklist
 
-> **Level:** Professional / Senior AppSec Engineer
+> **Audience:** AppSec learners and practitioners
 > **Standard:** OWASP Top 10 (2021)
 > **Use Case:** Security Assessment, Code Review, Pre-deployment Gate
 

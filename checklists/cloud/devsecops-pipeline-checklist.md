@@ -1,6 +1,6 @@
 # ☁️ DevSecOps CI/CD Pipeline Security Checklist
 
-> **Level:** Professional / Senior AppSec Engineer
+> **Audience:** AppSec learners and practitioners
 > **Use Case:** CI/CD Pipeline Security Review, DevSecOps Maturity Assessment
 
 ---
