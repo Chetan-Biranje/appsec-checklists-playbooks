@@ -1,0 +1,30 @@
+name: Secret scanning and SBOM
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  supply-chain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Scan Git history for secrets
+        run: docker run --rm -v "$PWD:/repo:ro" zricethezav/gitleaks:v8.24.3 git /repo --redact --no-banner
+      - name: Generate CycloneDX SBOM
+        if: always()
+        run: docker run --rm -v "$PWD:/src:ro" anchore/syft:v1.20.0 dir:/src -o cyclonedx-json > "$RUNNER_TEMP/sbom.cdx.json"
+      - name: Upload SBOM
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: repository-sbom
+          path: ${{ runner.temp }}/sbom.cdx.json
+          if-no-files-found: error
+          retention-days: 7
