@@ -1,0 +1,36 @@
+name: Repository security baseline
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  baseline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Verify repository policy files
+        run: |
+          for file in LICENSE SECURITY.md CONTRIBUTING.md; do
+            test -s "$file" || exit 1
+          done
+      - name: Check tracked Python syntax and JSON
+        run: |
+          python - <<'PY'
+          import ast, json, pathlib, subprocess
+          for raw in subprocess.check_output(["git", "ls-files", "-z"]).split(b"\0"):
+              if not raw:
+                  continue
+              p = pathlib.Path(raw.decode())
+              if not p.is_file() or p.is_symlink():
+                  continue
+              if p.suffix == ".py":
+                  ast.parse(p.read_bytes(), filename=str(p))
+              elif p.suffix == ".json":
+                  json.loads(p.read_bytes())
+          PY
