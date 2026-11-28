@@ -1,0 +1,25 @@
+name: Static security checks
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Install static analysis tools
+        run: python -m pip install 'bandit==1.8.6' 'semgrep==1.130.0'
+      - name: Python security analysis
+        run: |
+          if git ls-files '*.py' | grep -q .; then
+            bandit -r . -ll -ii
+          fi
+      - name: Semgrep security analysis
+        run: semgrep scan --config p/security-audit --error --metrics=off .
